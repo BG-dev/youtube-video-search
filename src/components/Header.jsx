@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../scss/components/search-panel.scss'
+import '../scss/components/header.scss'
 
 function Header() {
     return(

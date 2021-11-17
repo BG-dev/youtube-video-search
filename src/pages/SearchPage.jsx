@@ -1,18 +1,10 @@
 import React from "react";
 import {Header, SearchPanel, VideosBlock} from "../components"
+import { useSelector } from "react-redux";
 
-let SearchPage = () => {
+const SearchPage = () => {
 
-    const videos = [
-        {
-            title: "MyVideo",
-            description: "Lol Kek!"
-        },
-        {
-            title: "Minecraft",
-            description: "Mem!"
-        }
-    ]
+    const videos = useSelector(state => state.videos.videos.items);
 
     return(
         <div className="container">

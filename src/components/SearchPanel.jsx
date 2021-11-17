@@ -1,15 +1,26 @@
 import React from "react";
 import { Button } from "../components"
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, formValueSelector } from "redux-form";
+import store from "../redux/store";
+import { useDispatch } from "react-redux";
+import { fetchVideos } from "../redux/asyncActions/videos";
 
 import '../scss/components/search-panel.scss'
 
-const onSubmit = (values) => console.log(values.searchRequest)
+let SearchPanel = () => {
 
-let SearchPanel = ({handleSubmit}) => {
+    const dispatch = useDispatch();
+
+    const submit = (e) => {
+        e.preventDefault();
+        const selector = formValueSelector('search');
+        const value = selector(store.getState(), "searchRequest");
+        dispatch(fetchVideos(value));
+    }
+
     return(
         <div className="search">
-            <form onSubmit={handleSubmit} className="search__form">
+            <form onSubmit={submit} className="search__form">
                 <Field component={"input"} name={"searchRequest"} placeholder={"Search"} type="text" className="search__form-input" />
                 <Button 
                     className = "search__form-button"
@@ -22,8 +33,7 @@ let SearchPanel = ({handleSubmit}) => {
 }
 
 SearchPanel = reduxForm({
-    form: 'search',
-    onSubmit,
+    form: 'search'
 })(SearchPanel)
 
 export default SearchPanel;

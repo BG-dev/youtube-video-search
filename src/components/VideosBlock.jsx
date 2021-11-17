@@ -7,7 +7,7 @@ function VideosBlock({videos}){
     return(
         <div className="videos">
             <ul className="videos__list">
-                {videos.map((item, index) => {
+                {videos && videos.map((item, index) => {
                     return(
                         <li key={index} className="videos__list-item">
                             <VideoCard video={item}/>

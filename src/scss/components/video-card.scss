@@ -1,9 +1,10 @@
 .video-card{
     display: flex;
     flex-direction: column;
+    max-width: 300px;
 
     &__preview-img{
-        min-width: 300px;
+        max-width: 300px;
     }
 
     &__title-text{
