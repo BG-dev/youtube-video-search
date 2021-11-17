@@ -1,0 +1,24 @@
+@import '_normalize';
+
+$buttonColor: #FF4343;
+
+body{
+    box-sizing: border-box;
+}
+
+h1, h2, p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header{
+    &__title-text{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 2.3em;
+    }
+}

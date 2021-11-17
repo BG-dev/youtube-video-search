@@ -1,11 +1,12 @@
 import React from "react";
 import classNames from "classnames";
 
-function Button({onClick, children, className}){
+import '../scss/components/button.scss'
+
+function Button({children, className}){
     return(
         <button
             className={classNames('button', className)}
-            onClick={onClick}
         >
             {children}
         </button>

@@ -1,0 +1,13 @@
+.video-card{
+    display: flex;
+    flex-direction: column;
+
+    &__preview-img{
+        min-width: 300px;
+    }
+
+    &__title-text{
+        font-size: 1.3em;
+    }
+
+}

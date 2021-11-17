@@ -1,28 +1,24 @@
 import React from "react";
-import { Button } from "../components"
+import {Header, SearchPanel, VideosBlock} from "../components"
 
-function SearchPage(){
+let SearchPage = () => {
 
-    const onClickButton = () => {
-        console.log("lol!");
-    }
+    const videos = [
+        {
+            title: "MyVideo",
+            description: "Lol Kek!"
+        },
+        {
+            title: "Minecraft",
+            description: "Mem!"
+        }
+    ]
 
     return(
         <div className="container">
-            <div className="header">
-                <div className="header__title">
-                    <h1 className="header__title-text">YouTube Video Search</h1>
-                </div>
-            </div>
-            <div className="search">
-                <form className="search__form">
-                    <input type="text" className="search__form-input" />
-                    <Button 
-                        onClick = {() => onClickButton()}
-                        className = "search__form-button"
-                    >Search</Button>
-                </form>
-            </div>
+            <Header/>
+            <SearchPanel/>
+            <VideosBlock videos={videos} />
         </div>
     );
 }
