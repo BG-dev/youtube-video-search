@@ -1,0 +1,20 @@
+@import '../variables.scss';
+
+.search{
+        
+    &__form{
+        display: flex;
+        align-items: center;
+        &-input{
+            height: 50px;
+            border: none;
+            outline: none;
+            border: 2px solid $buttonColor;
+            min-width: 700px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1.8em;
+            padding: 5px;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../scss/components/search-panel.scss'
+
 function Header() {
     return(
         <div className="header">

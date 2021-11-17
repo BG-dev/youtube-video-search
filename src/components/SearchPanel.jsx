@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "../components"
 import { Field, reduxForm } from "redux-form";
 
+import '../scss/components/search-panel.scss'
+
 const onSubmit = (values) => console.log(values.searchRequest)
 
 let SearchPanel = ({handleSubmit}) => {
