@@ -12,10 +12,10 @@
     border: none;
 
     &:hover{
-        background-color: darken($color: $buttonColor, $amount: 5%);
+        background-color: darken($color: $buttonColor, $amount: 10%);
     }
 
     &:active{
-        background-color: darken($color: $buttonColor, $amount: 10%);
+        background-color: darken($color: $buttonColor, $amount: 20%);
     }
 }

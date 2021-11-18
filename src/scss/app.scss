@@ -1,5 +1,16 @@
 @import '_normalize';
 
+*{
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    -moz-hyphenate-limit-chars: 6 3 2; /* not yet supported */
+    -webkit-hyphenate-limit-chars: 6 3 2; /* not yet supported */
+    -ms-hyphenate-limit-chars: 6 3 2;
+    hyphenate-limit-chars: 6 3 2;
+    hyphenate-limit-last: always;
+}
+
 body{
     box-sizing: border-box;
 }
@@ -9,6 +20,6 @@ h1, h2, p{
 }
 
 .container{
-    width: 90%;
+    width: 93%;
     margin: 0 auto;
 }

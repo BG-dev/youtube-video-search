@@ -6,7 +6,7 @@ function VideoCard({video}){
 
     const videoData = video.snippet;
 
-    const videoPreview = videoData.thumbnails.high.url
+    const videoPreview = videoData.thumbnails.medium.url
 
     return(
         <div className="video-card">

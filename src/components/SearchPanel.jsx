@@ -15,6 +15,9 @@ let SearchPanel = () => {
         e.preventDefault();
         const selector = formValueSelector('search');
         const value = selector(store.getState(), "searchRequest");
+        if(!value) {
+            return;
+        }
         dispatch(fetchVideos(value));
     }
 
