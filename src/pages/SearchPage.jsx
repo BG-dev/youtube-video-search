@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 
 const SearchPage = () => {
 
-    const videos = useSelector(state => state.videos.videos.items);
+    const videos = useSelector(state => state.videos.videos);
 
     return(
         <div className="container">
             <Header/>
-            <SearchPanel/>
+            <SearchPanel videos={videos} />
             <VideosBlock videos={videos} />
         </div>
     );

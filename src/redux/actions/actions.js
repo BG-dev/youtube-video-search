@@ -1,1 +1,2 @@
 export const SET_VIDEOS_ACTION = "SET_VIDEOS";
+export const SET_NEXT_TOKEN_ACTION = "SET_NEXT_TOKEN";
