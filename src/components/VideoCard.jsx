@@ -8,6 +8,8 @@ function VideoCard({video}){
 
     const videoPreview = videoData.thumbnails.medium.url
 
+    console.log(video.rating)
+
     return(
         <div className="video-card">
             <div className="video-card__preview">
@@ -18,6 +20,11 @@ function VideoCard({video}){
                     <h2 className="video-card__title-text">
                         {videoData && videoData.title}
                         </h2>
+                </div>
+                <div className="video-card__channel">
+                    <p className="video-card__channel-text">
+                        {videoData && videoData.channelTitle}
+                        </p>
                 </div>
                 <div className="video-card__description">
                     <p className="video-card__description-text">
