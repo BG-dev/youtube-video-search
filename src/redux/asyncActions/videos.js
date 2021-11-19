@@ -1,7 +1,7 @@
 import { setVideos } from "../actions/videos";
 import { setNextToken } from "../actions/token";
 
-const KEY = 'AIzaSyDGuSsJwDr3-hbv-KLbOxAcqY3GmsliIiM';
+const KEY = 'AIzaSyDVa_upXJK9Tc9fTXDRiH-ztL8-PiQd4cc';
 
 export const fetchVideos = (value, token = null, videos = []) => {
     return dispatch => {
