@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Button } from "../components"
-import { Field, reduxForm, formValueSelector } from "redux-form";
+import { Field, reduxForm, formValueSelector } from "redux-form/immutable";
 import store from "../redux/store";
 import { useDispatch } from "react-redux";
 import { fetchVideos} from "../redux/asyncActions/videos";
@@ -12,7 +12,7 @@ let SearchPanel = ({videos}) => {
 
     const [fetching, setFetching] = useState(false);
     const dispatch = useDispatch();
-    const token = useSelector(state => state.token);
+    const token = useSelector(state => state.get("token"));
     const selector = formValueSelector('search');
 
     useEffect(() => {

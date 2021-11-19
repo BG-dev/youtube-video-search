@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const SearchPage = () => {
 
-    const videos = useSelector(state => state.videos.videos);
+    const videos = useSelector(state => state.get("videos").videos);
 
     return(
         <div className="container">

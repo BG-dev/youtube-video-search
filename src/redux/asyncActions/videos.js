@@ -10,7 +10,6 @@ export const fetchVideos = (value, token = null, videos = []) => {
         + "&type=video&part=snippet&maxResults=12&q=" + value + nextToken)
             .then(res => res.json())
             .then(json => {
-                console.log(token)
                 dispatch(setNextToken(json.nextPageToken))
                 dispatch(setVideos([...videos, ...json.items]))
             })

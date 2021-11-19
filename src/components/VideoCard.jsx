@@ -4,16 +4,14 @@ import '../scss/components/video-card.scss'
 
 function VideoCard({video}){
 
+
     const videoData = video.snippet;
-
     const videoPreview = videoData.thumbnails.medium.url
-
-    console.log(video.rating)
 
     return(
         <div className="video-card">
             <div className="video-card__preview">
-                <img src={videoPreview} className="video-card__preview-img" alt="Video Preview" />
+                <img src={videoPreview} width={320} height={180} className="video-card__preview-img" alt="Video Preview" />
             </div>
             <div className="video-card__information">
                 <div className="video-card__title">
@@ -24,6 +22,7 @@ function VideoCard({video}){
                 <div className="video-card__channel">
                     <p className="video-card__channel-text">
                         {videoData && videoData.channelTitle}
+                        
                         </p>
                 </div>
                 <div className="video-card__description">
