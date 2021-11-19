@@ -1,8 +1,15 @@
 .header{
 
+    display: flex;
+    align-items: center;
     margin-bottom: 50px;
     margin-top: 15px;
     margin-left: 20px;
+
+    &__logo{
+        margin-right: 7px;
+        padding-top: 4px;
+    }
 
     &__title-text{
         font-family: 'Roboto', sans-serif;
